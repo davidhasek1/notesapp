@@ -1,0 +1,21 @@
+<%- include('./layouts/head.ejs') %>
+<%- include('./layouts/navigation.ejs') %>
+
+<main class="edit-form">
+    <h1><% if(editing) { %> Update Note <% } else { %> Create Note <% } %></h1>
+
+    <form action="<% if(editing) { %> /admin/editnotes <% } else { %> /addnote <% } %> " method="POST">
+        <h2>Title</h2>
+        <input placeholder="Enter text" type="text" name="title" value="<% if (editing) { %><%=note.title%><% } %>">
+        <h3>Text</h3>
+        <textarea placeholder="Enter text" name="note" cols="150" rows="50"><% if (editing) { %><%=note.text%><% } %></textarea>
+
+        <% if (editing) { %>
+            <input type="hidden" name="id" value="<%= note.id %>">
+        <% } %>
+        <button style="margin: 20px; display: grid;" type="submit"><% if (editing) { %> Save changes <% } else { %> Create Note <% } %></button>
+    </form>
+
+</main>
+
+<%- include('./layouts/end.ejs') %>

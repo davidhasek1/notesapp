@@ -1,0 +1,113 @@
+textarea,
+input[type="text"] {
+	background-color: #212121;
+	font-family: sans-serif;
+	color: white;
+	
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #323232;
+	height: 100vh;
+	font-family: sans-serif;
+	color: white;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+h1 {
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+h4 {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	letter-spacing: 5px;
+	font-weight: 100;
+	font-size: 13px;
+}
+hr {
+	width: 75%;
+	height: 2px;
+	border: 5px dotted #0d7377;
+	border-style: none none dotted;
+}
+main {
+	min-height: 100%;
+	margin-bottom: -50px;
+}
+pre {
+	font-family: sans-serif;
+	border: 1px solid #909090;
+	white-space: pre-wrap;
+}
+.prediv {
+	padding: 20px;
+	background-color: #212121;
+}
+
+*:focus {
+	outline: none;
+}
+.mail-link {
+	text-decoration: none;
+	color: white;
+}
+.mail-link:hover {
+	text-decoration: none;
+	color: #14ffec;
+}
+.welcome-page {
+	text-align: center;
+	margin-top: 10%;
+}
+
+.get-started-btn {
+	margin: 10%;
+	padding: 20px 30px;
+}
+
+.menu-link {
+	padding: 10px;
+	text-decoration: none;
+	color: white;
+}
+.main-header {
+	margin: 0;
+	padding: 10px;
+	background-color: #212121;
+	display: flexbox;
+}
+
+.edit-form,
+.main-adminedit,
+.main-savednotes,
+.main-detail {
+	margin: 0 30px;
+}
+.note-text {
+	margin: 20px;
+}
+.detail-header,
+.admin-header {
+	margin: 0;
+	padding: 10px;
+}
+
+.btns,
+.btn, button {
+	display: flexbox;
+	cursor: pointer;
+}
+
+.footer {
+	background-color: #0d7377;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	bottom: 0;
+}

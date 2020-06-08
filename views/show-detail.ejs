@@ -1,0 +1,23 @@
+<%- include('./layouts/head.ejs') %>
+
+<%- include('./layouts/navigation.ejs') %>
+<main class="main-detail">
+    <header class="detail-header">
+    
+        <h1><%= note.title %></h1>
+        <h3><%= note.date %></h3>
+        <a href="/admin/editnotes/<%= note.id %>?edit=true"><button>Edit</button></a>
+    
+    </header>
+    <hr>
+    <div class="note-text">
+    
+        <pre><div class="prediv"><%= note.text %></div></pre>
+    </div>
+
+</main>
+
+
+
+
+<%- include('./layouts/end.ejs') %>

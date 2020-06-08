@@ -1,0 +1,28 @@
+<%- include('./layouts/head.ejs') %>
+<%- include('./layouts/navigation.ejs') %>
+<main class="main-adminedit">
+<h1><%= title %></h1>
+<!-- <button><a href="/admin/editnotes">Edit</a></button> -->
+
+<ul>
+    <% for( let n of note) { %>
+    <header class="admin-header">
+        <h2><%= n.title%></h2>
+        <h6><%= n.date %></h6>
+        <form action="/admin/deletenote" method="POST">
+            <input type="hidden" value="<%= n.id %>" name="noteId">
+            <button class="btn" type="submit">Delete</button>
+            <button class="btn"> <a href="/admin/editnotes/<%= n.id %>?edit=true">Edit</a> </button>
+        </form>
+        
+    </header>
+    <article>
+        <pre class="note-text"><div class="prediv"><%= n.text %></div></pre>
+        
+        
+    </article>
+    <hr>
+    <% } %>
+</ul>
+</main>
+<%- include('./layouts/end.ejs') %>

@@ -1,0 +1,27 @@
+<%- include('./layouts/head.ejs') %>
+<%- include('./layouts/navigation.ejs') %>
+
+<main class="main-savednotes">
+    <h1><%= title %></h1>
+    <!-- <button><a href="admin/editnotes">Edit</a></button> -->
+
+    <ul>
+    <% if(note.length > 0) { %>
+        <% for( let n of note) { %>
+            <header>
+                <h2><%= n.title%></h2>
+                <h6><%= n.date %></h6>
+                <a href="/savednotes/<%= n.id %>"><button>Show</button></a>
+                <hr>
+            <!--  <p><%= n.text %></p> -->
+                
+            </header>
+        <% } %>
+        <% } else { %>
+            <h1>Nothing saved</h1>
+        <% } %>
+    </ul>
+</main>
+
+<%- include('./layouts/end.ejs') %>
+
